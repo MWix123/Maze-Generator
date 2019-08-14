@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>    
+    <script type="text/javascript" src="scripts/maze.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>Maze Generator</h1>
+        <div class="center">
+            <p>Choose size of maze:</p>
+            <select id="maze-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <!--<option value="extra-large">Extra Large</option>-->
+            </select>
+        <button onclick="generateMaze()">Generate Maze</button>
+        <button onclick="printMazeToPDF()">Print Maze To PDF</button>
+        </div>
+        <table id="maze">
+            <tbody>
+                <!--<tr class="row">
+                    <td class="top-cell left-cell">&nbsp;</td>
+                    <td class="top-cell">&nbsp;</td>
+                    <td class="top-cell">&nbsp;</td>
+                </tr>
+                <tr class="row">
+                    <td class="left-cell bottom-cell top-cell">&nbsp;</td>
+                    <td class="bottom-cell top-cell">&nbsp;</td>
+                    <td class="bottom-cell right-cell">&nbsp;</td>
+                </tr>-->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

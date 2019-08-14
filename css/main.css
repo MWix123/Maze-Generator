@@ -1,0 +1,146 @@
+*{
+    outline:0;
+    margin:0;
+    padding:0;  
+}
+/* Background color ideas:
+    rgba(255,100,0,0.1)
+*/
+
+body{
+    background-color: rgba(255,100,0,0.1);
+    font-family: 'Fredoka One', cursive;
+    color:#b07300;
+    font-size: 16px;
+}
+
+.main{
+    padding:20px 0;
+    margin:20px;
+    /*border:1px solid #777777;
+    border-radius: 5px;
+    box-shadow: 0 0 2px black;*/
+}
+
+.main h1{
+    text-align:center;
+    font-weight: normal;
+    font-size: 2.2em;
+}
+
+.main select{
+    display:block;
+    margin:auto;
+    padding:5px;
+    color: #a06300;
+    border: 2px solid #a06300;
+    background-color: #f0b350;
+    font-weight: bold;
+}
+
+button{
+    padding: 5px;
+    color: #a06300;
+    border: 2px solid #a06300;
+    background-color: #f0b350;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+button:hover{
+    color:yellow;
+}
+
+button:active{
+    background-color: #a06300;
+}
+
+#maze{
+    margin:20px auto;
+    border-spacing: inherit;
+    border-collapse: collapse;
+}
+
+.center{
+    text-align: center;
+    line-height:3;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+tr.row{
+    line-height: 0;
+}
+
+#maze td{
+    width:9px;
+    height:9px;
+    user-select: none;
+}
+
+.bottom-cell{
+    border-bottom: 2px solid black !important;
+}
+
+.top-cell{
+    border-top:2px solid black !important;
+}
+
+.left-cell{
+    border-left:2px solid black !important;
+}
+
+.right-cell{
+    border-right:2px solid black !important;
+}
+
+.start-cell:before{
+    content: "Start"; /*Start: \2605*/
+    color: red;
+    width: 9px;
+    display: block;
+}
+
+.end-cell:before{
+    content: "End";
+    color: blue;
+    width: 9px;
+    display: block;
+}
+
+
+.left-open:before{
+    margin-right:35px;
+}
+
+.right-open:before{
+    margin-left:10px;
+}
+
+.top-open:before{
+    margin-bottom: 10px;
+}
+
+.bottom-open:before{
+    margin-top: 10px;
+}
+
+@media print {
+    .main h1, .center{
+        display:none;
+    }
+
+    .main{
+        padding:0;
+        margin:0;
+    }
+
+    #maze{
+        margin:10px auto;
+    }
+
+    #maze td{
+        width:10px;
+        height:10px;
+    }
+}
